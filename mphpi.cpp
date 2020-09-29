@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 
     try {
         LexicalAnalysis l(argv[1]);
-        Lexeme lex = l.nextToken();
+        Lexeme lex;
 
         while ((lex = l.nextToken()).type > 0) {
             std::cout << lex.str() << std::endl;            

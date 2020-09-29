@@ -12,6 +12,8 @@ class LexicalAnalysis {
         Lexeme nextToken();
         int line() const { return m_line; }
     private:
+        int isLetter(char c);
+        int isDigit(char c);
         int m_line;
         SymbolTable m_st;
         FILE* m_input;
