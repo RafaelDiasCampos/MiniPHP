@@ -21,6 +21,8 @@ enum TokenType {
 
     //Commands
     TT_IF,
+    TT_ELSE,
+    TT_ELSEIF,
     TT_WHILE,
     TT_FOREACH,
     TT_FOREACH_AS,
@@ -105,6 +107,10 @@ inline std::string tt2str(enum TokenType type) {
         //Commands
         case TT_IF:
             return "IF";
+        case TT_ELSE:
+            return "ELSE";
+        case TT_ELSEIF:
+            return "ELSEIF";
         case TT_WHILE:
             return "WHILE";
         case TT_FOREACH:

@@ -1,3 +1,5 @@
 *.o
 ./mphpi
 .vscode
+*.code-workspace
+*.mphp

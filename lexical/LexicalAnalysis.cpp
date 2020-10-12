@@ -2,6 +2,7 @@
 
 LexicalAnalysis::LexicalAnalysis(const char* filename) {
     m_input = fopen(filename, "r");
+    m_line = 1;
 }
 
 LexicalAnalysis::~LexicalAnalysis() {
@@ -33,9 +34,10 @@ Lexeme LexicalAnalysis::nextToken() {
                         lex.type = TT_END_OF_FILE;
                         state = 16;
                         break;
-                    case '\t':
-                    case '\r':
                     case '\n':
+                        m_line++;
+                    case '\t':
+                    case '\r':                    
                     case ' ':
                         break;
                     case '/':

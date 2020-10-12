@@ -18,3 +18,17 @@ echo " Bass: " . $bass . "\n";
 echo " Drums: " . $drums . "\n";
 
 $joao = 1 + 2;
+
+while ($a >= 45) {
+    $a--;
+}
+
+if ($a == 2) {
+
+}
+elseif (2 > 0) {
+
+}
+else {
+
+}

@@ -14,6 +14,8 @@ SymbolTable::SymbolTable() {
 
     //Commands
     m_symbols["if"] = TT_IF;
+    m_symbols["else"] = TT_ELSE;
+    m_symbols["elseif"] = TT_ELSEIF;
     m_symbols["while"] = TT_WHILE;
     m_symbols["foreach"] = TT_FOREACH;
     m_symbols["as"] = TT_FOREACH_AS;
