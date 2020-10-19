@@ -253,7 +253,7 @@ Lexeme LexicalAnalysis::nextToken() {
                     state = 16;
                 }
                 else if (c == '\\') {
-                    lex.token += c;
+                    //lex.token += c;
                     state = 14;
                 }
                 else if (c == '"') {
@@ -269,15 +269,42 @@ Lexeme LexicalAnalysis::nextToken() {
                 if (c == -1) {
                     lex.type = TT_UNEXPECTED_EOF;
                     state = 16;
+                    break;
                 }
-                else if (c == 'b' || c == 'f' || c == 'n' || c == 'r' || c == 't' || c == '\\' || c == '"') {
-                    lex.token += c;
-                    state = 13;
-                }
-                else {
-                    lex.token += c;
-                    lex.type = TT_INVALID_TOKEN;
-                    state = 16;
+                switch (c) {
+                    case 'b':
+                        lex.token += '\b';
+                        state = 13;
+                        break;
+                    case 'f':
+                        lex.token += '\f';
+                        state = 13;
+                        break;
+                    case 'n':
+                        lex.token += '\n';
+                        state = 13;
+                        break;
+                    case 'r':
+                        lex.token += '\r';
+                        state = 13;
+                        break;
+                    case 't':
+                        lex.token += '\t';
+                        state = 13;
+                        break;
+                    case '\\':
+                        lex.token += '\\';
+                        state = 13;
+                        break;
+                    case '"':
+                        lex.token += '"';
+                        state = 13;
+                        break;
+                    default:
+                        lex.token += c;
+                        lex.type = TT_INVALID_TOKEN;
+                        state = 16;
+                        break;
                 }
                 break;
             default:
