@@ -1,6 +1,7 @@
 #include <iostream>
 #include "lexical/LexicalAnalysis.h"
 #include "syntatic/SyntaticAnalysis.h"
+#include "interpreter/command/BlocksCommand.h"
 
 int main(int argc, char const *argv[])
 {
@@ -14,13 +15,9 @@ int main(int argc, char const *argv[])
         LexicalAnalysis l(argv[1]);
         SyntaticAnalysis syn(l);
         
+        BlocksCommand* code = syn.start(); 
 
-        // while ((lex = l.nextToken()).type > 0) {
-        //     std::cout << lex.str() << std::endl;            
-        // }
-        // std::cout << lex.str() << std::endl;
-
-        syn.start(); 
+        code -> execute ();        
 
     } catch (const std::string& error) {
         std::cerr << error << std::endl;
