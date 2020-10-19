@@ -2,5 +2,4 @@
 ./mphpi
 .vscode
 *.code-workspace
-*.mphp
-.mphpi
+mphpi

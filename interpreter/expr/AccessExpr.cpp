@@ -18,7 +18,7 @@ Type* AccessExpr::expr() {
     if (typeBase->type() != Type::ArrayType) { 
         if (m_index) {
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Nao e possivel utilizar indice para acessar tipos diferentes de array.";
+            error << "Nao e possivel utilizar indice para acessar tipos diferentes de array";
             throw error.str();
         }
         return typeBase;
@@ -42,7 +42,7 @@ Type* AccessExpr::expr() {
             break;
         case Type::ArrayType:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "O indice nao pode ser um array.";
+            error << "O indice nao pode ser um array";
             throw error.str();
     }
 
@@ -77,7 +77,7 @@ void AccessExpr::setExpr(Type* value) {
             return;
         default:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis.";
+            error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis";
             throw error.str();
     }
 

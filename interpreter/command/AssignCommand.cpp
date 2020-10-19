@@ -38,7 +38,7 @@ void AssignCommand::execute() {
         }
         else if (m_op != AssignOp::StdAssignOp) {            
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacao de atribuicao utilizada invalida para arrays.";
+            error << "Operacao de atribuicao utilizada invalida para arrays";
             throw error.str();
         }
 
@@ -57,7 +57,7 @@ void AssignCommand::execute() {
                 return;
             default:
                 error << std::setw(2) << std::setfill('0') << m_line << ": ";
-                error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis.";
+                error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis";
                 throw error.str();
         }
     }
@@ -97,7 +97,7 @@ void AssignCommand::execute() {
             case ModAssignOp:
             default:
                 error << std::setw(2) << std::setfill('0') << m_line << ": ";
-                error << "Operacao de atribuicao utilizada invalida para strings.";
+                error << "Operacao de atribuicao utilizada invalida para strings";
                 throw error.str();              
         }
 
@@ -118,7 +118,7 @@ void AssignCommand::execute() {
                 return;
             default:
                 error << std::setw(2) << std::setfill('0') << m_line << ": ";
-                error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis.";
+                error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis";
                 throw error.str();
         }
         
@@ -151,7 +151,7 @@ void AssignCommand::execute() {
         case ConcatAssignOp:
         default:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacao de atribuicao utilizada invalida para inteiros.";
+            error << "Operacao de atribuicao utilizada invalida para inteiros";
             throw error.str();              
     }
 
@@ -172,7 +172,7 @@ void AssignCommand::execute() {
             return;
         default:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis.";
+            error << "Operacoes de atribuicao sao invalidas para expressoes imutaveis";
             throw error.str();
     }
 

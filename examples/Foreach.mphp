@@ -1,0 +1,7 @@
+$b = "batata";
+
+$a = array (1 => 5, 2 => 3, $b => 23);
+
+foreach($a as $index=>$value) {
+    echo "Index: " . $index . "   Value: " . $value . "\n";
+}

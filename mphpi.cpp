@@ -17,7 +17,12 @@ int main(int argc, char const *argv[])
         
         BlocksCommand* code = syn.start(); 
 
-        code -> execute ();        
+        try {
+            code -> execute ();    
+        }
+        catch (const std::string& error) {
+            throw std::string("Operacao invalida: " + error);
+        }
 
     } catch (const std::string& error) {
         std::cerr << error << std::endl;

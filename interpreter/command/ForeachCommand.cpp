@@ -17,7 +17,7 @@ void ForeachCommand::execute() {
 
     if (arrayType->type() != Type::ArrayType) {
         error << std::setw(2) << std::setfill('0') << m_line << ": ";
-        error << "Comando foreach deve receber um array como expressao.";
+        error << "Comando foreach deve receber um array como expressao";
         throw error.str();
     }
 

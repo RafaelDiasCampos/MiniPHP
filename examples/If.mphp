@@ -1,0 +1,26 @@
+$a = 5;
+$b = 6;
+
+if ($a < $b) {
+    echo $a . " menor que " . $b . "\n";
+}
+else {
+    echo $a . " maior que " . $b . "\n";
+}
+
+if ($a > $b) {
+    echo $a . " maior que " . $b . "\n";
+}
+elseif ($a == $a) {
+    echo $a . " igual a " . $a . "\n";
+}
+
+if ($a > $b) {
+    echo $a . " maior que " . $b . "\n";
+}
+elseif ($a != $a) {
+    echo $a . " igual a " . $a . "\n";
+}
+else {
+    echo $a . " menor que " . $b . "\n";
+}

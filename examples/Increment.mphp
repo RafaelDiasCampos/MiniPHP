@@ -1,0 +1,5 @@
+$a = 1;
+echo "Current:" . $a . " PostIncrement: " . $a++ . " After: " . $a . "\n";
+echo "Current:" . $a . " PostDecrement: " . $a-- . " After: " . $a . "\n";
+echo "Current:" . $a . " PreIncrement:  " . ++$a . " After: " . $a . "\n";
+echo "Current:" . $a . " PreDecrement:  " . --$a . " After: " . $a . "\n";

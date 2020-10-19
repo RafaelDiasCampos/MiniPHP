@@ -24,7 +24,7 @@ Type* UnaryExpr::expr() {
         case Type::StringType:
         default:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacoes binarias sao invalidas para strings e arrays.";
+            error << "Operacoes binarias sao invalidas para strings e arrays";
             throw error.str();
     }
 
@@ -61,7 +61,7 @@ Type* UnaryExpr::expr() {
             break;
         default:
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Operacoes unarias sao invalidas para expressoes imutaveis.";
+            error << "Operacoes unarias sao invalidas para expressoes imutaveis";
             throw error.str();
     }
 

@@ -1,0 +1,3 @@
+$a = read "Digite um numero: ";
+
+echo $a . " + " . 23 . " = " . ($a+23) . "\n";

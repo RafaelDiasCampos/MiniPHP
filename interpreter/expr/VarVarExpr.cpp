@@ -24,7 +24,7 @@ std::string VarVarExpr::getVarName() {
         case Type::ArrayType:
             std::stringstream error;
             error << std::setw(2) << std::setfill('0') << m_line << ": ";
-            error << "Expressoes VarVar sao invalidas para arrays.";
+            error << "Expressoes VarVar sao invalidas para arrays";
             throw error.str();
     }
 

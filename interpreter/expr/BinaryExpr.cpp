@@ -21,7 +21,7 @@ Type* BinaryExpr::expr() {
 
     if (typeLeft->type() == Type::ArrayType || typeRight->type() == Type::ArrayType) {
         error << std::setw(2) << std::setfill('0') << m_line << ": ";
-        error << "Operacoes binarias sao invalidas para arrays.";
+        error << "Operacoes binarias sao invalidas para arrays";
         throw error.str();
     }
 
@@ -52,7 +52,7 @@ Type* BinaryExpr::expr() {
             case ModOp:
             default:
                 error << std::setw(2) << std::setfill('0') << m_line << ": ";
-                error << "Operacao binaria invalida para strings.";
+                error << "Operacao binaria invalida para strings";
                 throw error.str();
         }
 

@@ -31,7 +31,7 @@ Type* ArrayExpr::expr() {
                 break;
             case Type::ArrayType:
                 error << std::setw(2) << std::setfill('0') << m_line << ": ";
-                error << "O indice nao pode ser um array.";
+                error << "O indice nao pode ser um array";
                 throw error.str();
         }
 

@@ -1,0 +1,7 @@
+echo "saída: " . $$$$$x . "\n";
+
+$a = "um";
+$$a = "dois";
+$$$a = "tres";
+
+echo $dois . "\n";
