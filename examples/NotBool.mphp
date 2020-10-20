@@ -1,0 +1,5 @@
+$a = 5;
+
+if (!$a > 6) {
+    echo $a . " e menor que 6 \n";
+}

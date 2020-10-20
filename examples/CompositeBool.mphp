@@ -1,0 +1,18 @@
+$a = 5;
+$b = 7;
+
+if ($a == 5 and $b == 7) {
+    echo "Igual \n";
+}
+
+if ($a == 5 and $b == 8) {
+    echo "Diferente \n";
+}
+
+if ($a == 6 and $b == 7) {
+    echo "Diferente \n";
+}
+
+if ($a == 6 and $b == 8) {
+    echo "Diferente \n";
+}

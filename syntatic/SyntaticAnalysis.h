@@ -35,7 +35,7 @@ class SyntaticAnalysis {
         ReadExpr* procRead();
         Expr* procValue();
         AccessExpr* procAccess();
-        Expr* procVarvar();
+        SetExpr* procVarvar();
         Variable* procVar();
 };
 

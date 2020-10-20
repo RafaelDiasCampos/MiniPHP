@@ -1,0 +1,8 @@
+/* Calcula o somatorio de numeros obtidos pela entrada */
+
+$sum = read "Digite um número: ";
+
+while (1 == 1) {
+    $sum += read "Digite um outro número: ";
+    echo "Somatório atual: " . $sum . "\n";
+}
