@@ -14,6 +14,7 @@ class ArrayValue : public Value<std::map<std::string,Type*> > {
         virtual ~ArrayValue();
 
         std::map<std::string,Type*> value() const;
+        void setValue(std::map<std::string,Type*> value);
 
     private:
         std::map<std::string,Type*> m_value;

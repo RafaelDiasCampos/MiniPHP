@@ -10,3 +10,7 @@ ArrayValue::~ArrayValue() {
 std::map<std::string,Type*> ArrayValue::value() const {
     return m_value;
 }
+
+void ArrayValue::setValue(std::map<std::string,Type*> value) {
+    m_value = value;
+}
